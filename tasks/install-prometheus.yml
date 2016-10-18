@@ -10,7 +10,7 @@
 
     - name: set internal variables for convenience
       set_fact:
-        prometheus_tarball_url: "https://github.com/prometheus/prometheus/releases/download/{{ prometheus_version }}/prometheus-{{ prometheus_version }}.linux-amd64.tar.gz"
+        prometheus_tarball_url: "https://github.com/prometheus/prometheus/releases/download/v{{ prometheus_version }}/prometheus-{{ prometheus_version }}.linux-amd64.tar.gz"
         prometheus_subdir: "{{ prometheus_install_path }}/prometheus-{{ prometheus_version }}.linux-amd64"
       when: ansible_userspace_bits == "64"
 
