@@ -19,8 +19,10 @@ This Ansible role has the following features for [Prometheus](http://prometheus.
 
 To keep this role simple, this role only installs 3 components: Prometheus server, Node exporter, and Alertmanager. Use the following roles if you want to install other Prometheus exporters:
 
-- **[William-Yeh.consul_exporter](https://galaxy.ansible.com/William-Yeh/consul_exporter/)**
-- **[williamyeh.mongodb_exporter](https://galaxy.ansible.com/williamyeh/mongodb_exporter/)**
+- Consul: **[William-Yeh.consul_exporter](https://galaxy.ansible.com/William-Yeh/consul_exporter/)**
+- Elasticsearch: **[William-Yeh.es_cluster_exporter](https://galaxy.ansible.com/William-Yeh/es_cluster_exporter/)**
+- MongoDB: **[williamyeh.mongodb_exporter](https://galaxy.ansible.com/williamyeh/mongodb_exporter/)**
+
 
 
 ## Role Variables
@@ -97,7 +99,7 @@ User-configurable defaults:
 
 ```yaml
 # which version?
-prometheus_version:  0.19.1
+prometheus_version:  1.0.0
 
 
 
@@ -178,7 +180,7 @@ User-configurable defaults:
 
 ```yaml
 # which version?
-prometheus_alertmanager_version:  0.1.1
+prometheus_alertmanager_version:  0.3.0
 
 # directory for runtime database (currently for `silences.json`)
 prometheus_alertmanager_db_path: /var/lib/alertmanager
@@ -238,7 +240,7 @@ Node exporter:
 
 - `restart node_exporter`
 
-- `reload node_exporter`
+- `reload node_exporter` (actually, the same as `restart`)
 
 - `stop node_exporter`
 
@@ -330,7 +332,7 @@ None.
 
 - [William Yeh](https://github.com/William-Yeh)
 - [Robbie Trencheny](https://github.com/robbiet480) - contribute an early version of building binaries from Go source code.
-- [Travis Truman](https://github.com/trumant) - contribute an early version of consul_exporter installer; now moved to [williamyeh.consul_exporter](https://github.com/William-Yeh/ansible-consul-exporter).
+- [Travis Truman](https://github.com/trumant) - contribute an early version of consul_exporter installer; now moved to [William-Yeh.consul_exporter](https://github.com/William-Yeh/ansible-consul-exporter).
 - [Musee Ullah](https://github.com/lae)
 
 ## License
