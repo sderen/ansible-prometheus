@@ -35,8 +35,8 @@
 
     - name: download and untar pushgateway tarball
       unarchive:
-        src: "{{ prometheus_pushgateway_tarball_url }}"
-        dest: "{{ prometheus_pushgateway_subdir }}"
+        src: "/opt/prometheus/pushgateway-0.3.0.linux-amd64.tar.gz"
+        dest: "{{ prometheus_install_path }}"
         copy: no
 
   when: prometheus_pushgateway_version != "git"

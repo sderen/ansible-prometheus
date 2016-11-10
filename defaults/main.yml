@@ -13,10 +13,10 @@
 prometheus_user:   prometheus
 prometheus_group:  prometheus
 
-prometheus_version:                 1.0.0
+prometheus_version:                 1.2.1
 prometheus_node_exporter_version:   0.12.0
-prometheus_alertmanager_version:    0.3.0
-prometheus_pushgateway_version:     0.2.0
+prometheus_alertmanager_version:    0.4.2
+prometheus_pushgateway_version:     0.3.0
 
 gosu_version: 1.9
 prometheus_go_version:   1.6.2

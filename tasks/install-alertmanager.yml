@@ -44,7 +44,7 @@
 
     - name: download and uncompress alertmanager tarball
       unarchive:
-        src: "{{ prometheus_alertmanager_tarball_url }}"
+        src: "/opt/prometheus/alertmanager-0.4.2.linux-amd64.tar.gz"
         dest: "{{ prometheus_alertmanager_untar_path }}"
         copy: no
         owner: "{{ prometheus_user }}"

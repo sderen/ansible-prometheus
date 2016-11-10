@@ -19,8 +19,6 @@
 
 
 
-- name: download gosu executable
-  get_url: url="{{ gosu_exe_url }}"  dest="/usr/local/bin/gosu"
 
 - name: add executable permission
   file: path="/usr/local/bin/gosu" state=file mode="a+x"
